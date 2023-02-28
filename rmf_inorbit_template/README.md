@@ -18,7 +18,7 @@ Go to [ros_amr_interop/rmf_inorbit_fleet_adapter](https://github.com/inorbit-ai/
 
 ![api key tab](assets/api%20key.png)
 
-- In your local workspace, you can choose to set this API key as an environment variable under the name of INORBIT_API_KEY or pass it to the adapter explicitly on launch. To set it permanently as an environment variable:
+- In your local workspace, you can choose to set this API key as an environment variable under the name of `INORBIT_API_KEY` or pass it to the adapter explicitly on launch. To set it permanently as an environment variable:
 
 ```
 # From inside the container:
