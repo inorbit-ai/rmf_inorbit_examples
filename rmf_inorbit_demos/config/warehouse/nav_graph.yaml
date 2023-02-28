@@ -1,0 +1,166 @@
+# Copyright 2023 InOrbit, Inc.
+
+building_name: warehouse
+levels:
+  L0:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0, undock_name: dock1}
+    - - 1
+      - 0
+      - {dock_name: dock1, speed_limit: 0}
+    - - 1
+      - 2
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 2
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 2
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 7
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 7
+      - {speed_limit: 0}
+    - - 9
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 9
+      - {speed_limit: 0}
+    - - 11
+      - 12
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 12
+      - 13
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 13
+      - 14
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 14
+      - 11
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 1
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 1
+      - {speed_limit: 0}
+    - - 15
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 15
+      - {speed_limit: 0}
+    - - 5
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 5
+      - {speed_limit: 0}
+    - - 16
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 15
+      - {is_bidirectional: false, speed_limit: 0}
+    - - 3
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 3
+      - {speed_limit: 0}
+    - - 17
+      - 18
+      - {dock_name: dock2, speed_limit: 0}
+    - - 18
+      - 17
+      - {speed_limit: 0, undock_name: dock2}
+    vertices:
+    - - 1.5290115551650763
+      - -5.592675419530667
+      - {dock_name: dock1, is_charger: true, name: dock1}
+    - - 6.85064138095878
+      - -5.6723770643832205
+      - {name: ''}
+    - - 6.887262136724156
+      - -10.690160619511934
+      - {name: ''}
+    - - 5.019323586911311
+      - -10.69932080855647
+      - {name: ''}
+    - - 5.028483775955845
+      - -13.070869751691093
+      - {is_parking_spot: true, name: e04}
+    - - 9.588457882985452
+      - -11.486797060195006
+      - {name: ''}
+    - - 9.60677826107452
+      - -13.15329145267914
+      - {is_parking_spot: true, name: e03}
+    - - 13.959188084470552
+      - -11.5427382146875
+      - {name: ''}
+    - - 13.975468420458
+      - -13.121750801755056
+      - {is_parking_spot: true, name: e02}
+    - - 18.224116102450004
+      - -11.493917207137919
+      - {name: ''}
+    - - 18.240376438024693
+      - -13.235693153254427
+      - {is_parking_spot: true, name: e01}
+    - - 12.754583224288766
+      - -5.666276938491118
+      - {name: ''}
+    - - 14.642882194292303
+      - -5.649996602503671
+      - {name: ''}
+    - - 14.579060877171976
+      - -1.6359737626108615
+      - {name: p03}
+    - - 12.745483036482513
+      - -1.62929362474869
+      - {is_parking_spot: true, name: p04, pickup_dispenser: pickup}
+    - - 10.668200166300364
+      - -5.706397766489668
+      - {name: ''}
+    - - 10.892664798716977
+      - -11.437516043151922
+      - {name: ''}
+    - - 1.600033020879359
+      - -10.700220827130712
+      - {name: ''}
+    - - 1.600033020879359
+      - -12.940267056361815
+      - {dock_name: dock2, is_charger: true, name: dock2}

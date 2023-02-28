@@ -1,0 +1,109 @@
+# Copyright 2023 InOrbit, Inc.
+
+# FLEET CONFIG =================================================================
+# RMF Fleet parameters
+
+rmf_fleet:
+  name: "InOrbitWarehouse"
+  fleet_handle:
+    # Difference to target pose before stopping. Lower values may render the adapter unstable
+    threshold_distance: 0.22 # Meters
+    threshold_angle: 0.2 # Radians
+  limits:
+    linear: [0.4, 0.2] # velocity, acceleration
+    angular: [0.3, 0.35] # velocity, acceleration
+  profile: # Robot profile is modelled as a circle
+    footprint: 0.5 # radius in m
+    vicinity: 0.6 # radius in m
+  reversible: True # whether robots in this fleet can reverse
+  battery_system:
+    voltage: 24.0 # V
+    capacity: 40.0 # Ahr
+    charging_current: 26.4 # A
+  mechanical_system:
+    mass: 80.0 # kg
+    moment_of_inertia: 20.0 #kgm^2
+    friction_coefficient: 0.20
+  ambient_system:
+    power: 20.0 # W
+  tool_system:
+    power: 760.0 # W
+  recharge_threshold: 0.20 # Battery level below which robots in this fleet will not operate
+  recharge_soc: 0.95 # Battery level to which robots in this fleet should be charged up to during recharging tasks
+  publish_fleet_state: True
+  account_for_battery_drain: True
+  task_capabilities: # Specify the types of RMF Tasks that robots in this fleet are capable of performing
+    loop: True
+    finishing_request: "charge" # [park, charge, nothing]
+
+# MAP CONFIG ===================================================================
+# The values are used to compute the transformations between InOrbit and RMF coordinate systems
+
+map:
+  # These are the X and Y values from the map metadata downloaded from InOrbit
+  x: -10.609999656677246
+  y: -7.175000190734863
+
+# ROBOT CONFIG =================================================================
+
+robots:
+  # Here the user is expected to append the configuration for each robot in the
+  # fleet.
+  tugz334:
+    robot_config:
+      max_delay: 10.0 # allowed seconds of delay of the current itinerary before it gets interrupted and replanned
+      # InOrbit specific config
+      robot_id: "951619111"
+      battery_charge_attribute_id: "KrBkh-66MBL96dya"
+      charging_status_attribute_id: "GeCbVvUI7NgDv1f_"
+      actions:
+        dock:
+          # Complete with the action ID of docking, and the 'dock_name' of the dock the action will trigger docking to
+          action_id: "PublishToTopic-0pxSHM"
+          dock_name: "dock1"
+    rmf_config:
+      robot_state_update_frequency: 1
+      start:
+        map_name: "map"
+        waypoint: "p03"
+        orientation: 1.67
+      charger:
+        waypoint: "dock1"
+
+  tugz335:
+    robot_config:
+      max_delay: 10.0
+      robot_id: "376796497"
+      battery_charge_attribute_id: "KrBkh-66MBL96dya"
+      charging_status_attribute_id: "GeCbVvUI7NgDv1f_"
+      actions:
+        dock:
+          action_id: "PublishToTopic-0pxSHM"
+          dock_name: "dock1"
+    rmf_config:
+      robot_state_update_frequency: 1
+      start:
+        map_name: "map"
+        waypoint: "e03"
+        orientation: 1.67
+      charger:
+        waypoint: "dock1"
+
+  tugz336:
+    robot_config:
+      max_delay: 10.0
+      robot_id: "027618763"
+      battery_charge_attribute_id: "KrBkh-66MBL96dya"
+      charging_status_attribute_id: "GeCbVvUI7NgDv1f_"
+      actions:
+        dock:
+          action_id: "PublishToTopic-0pxSHM"
+          dock_name: "dock2"
+    rmf_config:
+      robot_state_update_frequency: 1
+      start:
+        map_name: "map"
+        waypoint: "e04"
+        orientation: 1.67
+      charger:
+        waypoint: "dock2"
