@@ -11,7 +11,7 @@ Go to [ros_amr_interop/rmf_inorbit_fleet_adapter](https://github.com/inorbit-ai/
 
 ## Configure your InOrbit account
 
-1. Get an active InOrbit account for your organization. Log into InOrbit at [console.inorbit.ai](console.inorbit.ai).
+1. Get an active InOrbit account for your organization. Log into InOrbit at [https://console.inorbit.ai/](console.inorbit.ai).
 2. Go to the [configuration](https://console.inorbit.ai/configuration) page and navigate to the API key tab.
 3. Click in the **+** sign and create an API key. In the `role` dropdown menu, select **Operator**.
 4. Show the API key by clicking in the eye icon and the copy it.
