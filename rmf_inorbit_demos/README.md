@@ -46,7 +46,7 @@ colcon build
 
 ## Start a demo
 
-Open the invitation link you received to your email in a chromium based browser, or log into your newly created account at [control.inorbit.ai](control.inorbit.ai). After completing the tutorial, go to the the `Navigation` dashboard and in the text box at the top bar, type `Tugz335` and press Enter.
+Open the invitation link you received to your email in a chromium based browser, or log into your newly created account at [control.inorbit.ai](https://control.inorbit.ai/). After completing the tutorial, go to the the `Navigation` dashboard and in the text box at the top bar, type `Tugz335` and press Enter.
 
 ![navigation dashboard annotated](assets/navigation%20dashboard%20annotated.png)
 
