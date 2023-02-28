@@ -2,7 +2,7 @@
 
 ![InOrbit + Open-RMF](assets/open%20rmf%20inorbit%20github%20header%20narrow%202.png)
 
-This package provides already working configurations of the [Full Control InOrbit/RMF Fleet Adapter](https://github.com/inorbit-ai/rmf-inorbit-internal/tree/main/rmf_inorbit_fleet_adapter) for an existing [InOrbit](https://www.inorbit.ai/product) demonstration environment. It will help you understand better how [Open-RMF](https://github.com/open-rmf/rmf#robotics-middleware-framework-rmf) and InOrbit work together, without the need for real robots.
+This package provides already working configurations of the [Full Control InOrbit/RMF Fleet Adapter](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter) for an existing [InOrbit](https://www.inorbit.ai/product) demonstration environment. It will help you understand better how [Open-RMF](https://github.com/open-rmf/rmf#robotics-middleware-framework-rmf) and InOrbit work together, without the need for real robots.
 
 ## Overview
 
@@ -16,11 +16,11 @@ This demo is set-up to use a specific InOrbit location with three robots. A demo
 
 To request access to the InOrbit RMF Demo account, please send an email to [`success@inorbit.ai`](success@inorbit.ai). A temporary InOrbit Enterprise account with limited access for a fictional company called **Hooli** will be created for you, as well as an API key for the fleet adapter.
 
-If you already are an InOrbit customer and want to set up a fleet adapter to work with your own fleet, checkout our [template package](https://github.com/inorbit-ai/rmf-inorbit-internal/tree/main/rmf_inorbit_template) after playing with the demo.
+If you already are an InOrbit customer and want to set up a fleet adapter to work with your own fleet, checkout our [template package](https://github.com/inorbit-ai/rmf_inorbit_examples/tree/main/rmf_inorbit_template) after playing with the demo.
 
 ## Environment setup
 
-Both RMF and the fleet adapter run on a machine separated from the robots. You will need access to an Ubuntu 22.04 box or use our Docker setup to get the fleet adapter running. To achieve this, first follow the instructions in the fleet adapter package [guide](https://github.com/inorbit-ai/rmf-inorbit-internal/blob/main/rmf_inorbit_fleet_adapter/README.md) (TODO: point to specific section) and once the fleet adapter is built and the dependencies installed, follow the next steps:
+Both RMF and the fleet adapter run on a machine separated from the robots. You will need access to an Ubuntu 22.04 box or use our Docker setup to get the fleet adapter running. To achieve this, first follow the instructions in the fleet adapter package [guide](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter/README.md) (TODO: point to specific section) and once the fleet adapter is built and the dependencies installed, follow the next steps:
 
 - Clone the examples repository inside the src folder of your workspace:
 
@@ -123,7 +123,7 @@ You can see the location of these vertices in the provided screenshot of traffic
 
 ## Modifying the demos
 
-You can play around with the settings in `adapter.config.yaml` or edit the building description graph in `traffic-editor` and export a new navigation graph. The possible settings and the setup process is explained in our [template package](https://github.com/inorbit-ai/rmf-inorbit-internal/tree/main/rmf_inorbit_template).
+You can play around with the settings in `adapter.config.yaml` or edit the building description graph in `traffic-editor` and export a new navigation graph. The possible settings and the setup process is explained in our [template package](https://github.com/inorbit-ai/rmf_inorbit_examples/tree/main/rmf_inorbit_template).
 
 ## Troubleshooting
 
@@ -133,7 +133,7 @@ If some robots are not moving, check their battery level by clicking their avata
 
 All log messages are logged to the console. If you are having trouble, look for warnings or errors. You can use [`rqt_console`](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html), which is included in our docker image.
 
-If you inspect the ROS2 environment you will see the following the features listed below were launched. Most are part of `RMF` functionality. To see exactly which are being launched by our fleet adapter, see [here](https://github.com/inorbit-ai/rmf-inorbit-internal/blob/main/rmf_inorbit_fleet_adapter/README.md) (TODO: point to specific section). If you see certain nodes are missing, the system might be malfunctioning.
+If you inspect the ROS2 environment you will see the following the features listed below were launched. Most are part of `RMF` functionality. To see exactly which are being launched by our fleet adapter, see [here](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter/rmf_inorbit_fleet_adapter#nodes). If you see certain nodes are missing, the system might be malfunctioning.
 
 ### Nodes
 
