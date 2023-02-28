@@ -20,13 +20,13 @@ If you already are an InOrbit customer and want to set up a fleet adapter to wor
 
 ## Environment setup
 
-Both RMF and the fleet adapter run on a machine separated from the robots. You will need access to an Ubuntu 22.04 box or use our Docker setup to get the fleet adapter running. To achieve this, first follow the instructions in the fleet adapter package [guide](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter/README.md) (TODO: point to specific section) and once the fleet adapter is built and the dependencies installed, follow the next steps:
+Both RMF and the fleet adapter run on a machine separated from the robots. You will need access to an Ubuntu 22.04 box or use our Docker setup to get the fleet adapter running. To achieve this, first follow the instructions in the fleet adapter package [guide](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter/rmf_inorbit_fleet_adapter#setup) and once the fleet adapter is built and the dependencies installed, follow the next steps:
 
 - Clone the examples repository inside the src folder of your workspace:
 
 ```
 cd ~/ws/src
-git clone TODO: rmf_inorbit_examples repo
+git clone https://github.com/inorbit-ai/rmf_inorbit_examples
 ```
 
 - Add the API key you obtained from InOrbit as an environment variable:
