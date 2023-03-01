@@ -2,11 +2,11 @@
 
 ![InOrbit + Open-RMF](assets/open%20rmf%20inorbit%20github%20header%20narrow%202.png)
 
-This package provides already working configurations of the [Full Control InOrbit/RMF Fleet Adapter](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter) for an existing [InOrbit](https://www.inorbit.ai/product) demonstration environment. It will help you understand better how [Open-RMF](https://github.com/open-rmf/rmf#robotics-middleware-framework-rmf) and InOrbit work together, without the need for real robots.
+This package provides a configuration of the [Full Control InOrbit/RMF Fleet Adapter](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter) which is ready to be used with an already-configured [InOrbit](https://www.inorbit.ai/product) demo account provided by the InOrbit team. It will help you understand how [Open-RMF](https://github.com/open-rmf/rmf#robotics-middleware-framework-rmf) and InOrbit work together without the need to set-up simulations or real robots.
 
 ## Overview
 
-This guide will take you to the process of setting up your local machine to run RMF and the InOrbit Fleet Adapter in the demonstration environments, and will explain how the Fleet Adapter works. These demos run on a simulated warehouse with multiple robots inside it that can be monitored via InOrbit.
+This guide will take you through the process of setting up your local machine to run RMF and the InOrbit Fleet Adapter in the demonstration environments, and will explain how the Fleet Adapter works. These demos run on a simulated warehouse with multiple robots inside it that can be monitored via InOrbit.
 
 ![mission video](assets/full%20mission.gif)
 
@@ -14,9 +14,9 @@ This guide will take you to the process of setting up your local machine to run 
 
 This demo is set-up to use a specific InOrbit location with three robots. A demo account with this set-up already prepared is available upon request, and will give you access to a three robot simulation and some of the most important features of the InOrbit Platform for the full experience.
 
-To request access to the InOrbit RMF Demo account, please send an email to [`success@inorbit.ai`](success@inorbit.ai). A temporary InOrbit Enterprise account with limited access for a fictional company called **Hooli** will be created for you, as well as an API key for the fleet adapter.
+To request access to the InOrbit demo account, please send an email to [`success@inorbit.ai`](success@inorbit.ai). You will be granted temporary access to the InOrbit Control UI and a matching API Key to use with the fleet adapter. This user and API Key will have access to a location with three robots in a pre-created InOrbit Enterprise Edition account.
 
-If you already are an InOrbit customer and want to set up a fleet adapter to work with your own fleet, checkout our [template package](https://github.com/inorbit-ai/rmf_inorbit_examples/tree/main/rmf_inorbit_template) after playing with the demo.
+In order to use your own InOrbit account with your own robot fleet, check the [template package](https://github.com/inorbit-ai/rmf_inorbit_examples/tree/main/rmf_inorbit_template).
 
 ## Environment setup
 
@@ -46,15 +46,15 @@ colcon build
 
 ## Start a demo
 
-Open the invitation link you received to your email in a chromium based browser, or log into your newly created account at [control.inorbit.ai](https://control.inorbit.ai/). After completing the tutorial, go to the the `Navigation` dashboard and in the text box at the top bar, type `Tugz335` and press Enter.
+Open the invitation link you received to your email in a Chrome browser. The URL should have the form `https://control.inorbit.ai/join?inviteCode=xxxxx` After completing the tutorial, go to the the `Navigation` dashboard and in the text box at the top bar, type `Tugz335` and press Enter.
 
 ![navigation dashboard annotated](assets/navigation%20dashboard%20annotated.png)
 
-What your are seeing is not a real warehouse, but an overlap of three different simulations with one robot each based on [aws-robomaker-small-warehouse-world](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world). Even though the robots cannot collide with each other, RMF will receive their data as if they were in the same place and will orchestrate all of the movements accordingly.
+NOTE: What your are seeing is not a real warehouse, but an overlap of three different simulations with one robot each based on [aws-robomaker-small-warehouse-world](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world). Even though the robots cannot collide with each other, RMF will receive their data as if they were in the same place and will orchestrate all of the movements accordingly.
 
 **Important note:** If the robots don't move as expected after starting the demo or if the robots are already moving, the lock might be on (see the above picture and locate the indicator, which in this example shows unlocked). If the robots are locked, **do not break the lock!** Someone else might be playing with the same robots, and two active controllers at the same time will cause problems.
 
-InOrbit's Control page provides a lot of useful information. For this particular application, the `Fleet` dashboard might be of your interest, but feel free to explore all of them!
+InOrbit Control provides a lot of useful information. For this particular application, the `Fleet` dashboard might be of your interest, but feel free to explore all of them!
 
 The `rmf_inorbit_demos` package contains two important folders:
 
@@ -134,6 +134,8 @@ If some robots are not moving, check their battery level by clicking their avata
 All log messages are logged to the console. If you are having trouble, look for warnings or errors. You can use [`rqt_console`](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html), which is included in our docker image.
 
 If you inspect the ROS2 environment you will see the following the features listed below were launched. Most are part of `RMF` functionality. To see exactly which are being launched by our fleet adapter, see [here](https://github.com/inorbit-ai/ros_amr_interop/tree/humble-devel/rmf_inorbit_fleet_adapter/rmf_inorbit_fleet_adapter#nodes). If you see certain nodes are missing, the system might be malfunctioning.
+
+Feel free to contact the InOrbit team at `support@inorbit.ai` for further questions.
 
 ### Nodes
 
