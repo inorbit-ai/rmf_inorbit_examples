@@ -32,7 +32,7 @@ git clone https://github.com/inorbit-ai/rmf_inorbit_examples
 - Add the API key you obtained from InOrbit as an environment variable:
 
 ```
-echo “export INORBIT_API_KEY=<your api key>” >> ~/.bashrc
+echo 'export INORBIT_API_KEY=<your api key>' >> ~/.bashrc
 source ~/.bashrc
 # If in a docker environment, remember to commit the changes at the exit trap when exiting the container
 ```
