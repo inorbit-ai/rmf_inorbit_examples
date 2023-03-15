@@ -22,7 +22,7 @@ Go to [ros_amr_interop/rmf_inorbit_fleet_adapter](https://github.com/inorbit-ai/
 
 ```
 # From inside the container:
-echo  “INORBIT_API_KEY=<your api key>” >> ~/.bashrc
+echo "export INORBIT_API_KEY=<your api key>" >> ~/.bashrc
 source ~/.bashrc
 
 # If in a docker environment, remember to commit the changes at the exit trap when exiting the container
