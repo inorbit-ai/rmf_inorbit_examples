@@ -7,7 +7,7 @@
   <arg name="api_key" default="$(env INORBIT_API_KEY)" description="InOrbit API key"/>
   <arg name="adapter_config_file" description="Path to the configuration file of the adapter"/>
   <arg name="nav_graph_file" description="Path to the navigation graph file for RMF"/>
-  <arg name="server_uri" default="" description="WS server URI to receive status updates"/>
+  <arg name="server_uri" default="" description="Websocket server URI to receive status updates"/>
   <arg name="use_sim_time" default="false" description="Use the /clock topic for time to sync with simulation"/>
   <arg name="bidding_time_window" default="2.0" description="Time window in seconds for task bidding process"/>
 
