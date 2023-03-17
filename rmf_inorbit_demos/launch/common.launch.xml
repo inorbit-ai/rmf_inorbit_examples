@@ -5,8 +5,9 @@
 
 <launch>
   <arg name="api_key" default="$(env INORBIT_API_KEY)" description="InOrbit API key"/>
-  <arg name="adapter_config_file" description="Path to the configuration file of the adapter" />
-  <arg name="nav_graph_file" description="Path to the navigation graph file for RMF" />
+  <arg name="adapter_config_file" description="Path to the configuration file of the adapter"/>
+  <arg name="nav_graph_file" description="Path to the navigation graph file for RMF"/>
+  <arg name="server_uri" default="" description="Websocket server URI to receive status updates"/>
   <arg name="use_sim_time" default="false" description="Use the /clock topic for time to sync with simulation"/>
   <arg name="bidding_time_window" default="2.0" description="Time window in seconds for task bidding process"/>
 
@@ -45,7 +46,8 @@
   <!-- InOrbit RMF Fleet Adapter -->
   <include file="$(find-pkg-share rmf_inorbit_fleet_adapter)/rmf_inorbit_fleet_adapter.launch.xml">
     <arg name="api_key" value="$(var api_key)"/>
-    <arg name="adapter_config_file" value="$(var adapter_config_file)" />
-    <arg name="nav_graph_file" value="$(var nav_graph_file)" />
+    <arg name="adapter_config_file" value="$(var adapter_config_file)"/>
+    <arg name="nav_graph_file" value="$(var nav_graph_file)"/>
+    <arg name="server_uri" value="$(var server_uri)"/>
   </include>
 </launch>

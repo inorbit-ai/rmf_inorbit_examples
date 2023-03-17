@@ -6,6 +6,7 @@
 <launch>
   <arg name="use_sim_time" default="false"/>
   <arg name="api_key" description="InOrbit API key" default="$(env INORBIT_API_KEY)"/>
+  <arg name="server_uri" default="" description="Websocket server URI to receive status updates"/>
 
   <!-- Common launch -->
   <include file="$(find-pkg-share rmf_inorbit_template)/common.launch.xml">
@@ -13,5 +14,6 @@
     <arg name="api_key" value="$(var api_key)"/>
     <arg name="nav_graph_file" value="$(find-pkg-share rmf_inorbit_template)/warehouse/nav_graph.yaml"/>
     <arg name="adapter_config_file" value="$(find-pkg-share rmf_inorbit_template)/warehouse/my_adapter.config.yaml"/>
+    <arg name="server_uri" value="$(var server_uri)"/>
   </include>
 </launch>
